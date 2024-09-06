@@ -1,0 +1,59 @@
+.footer {
+    padding: 18px 30px;
+    height: 122px;
+    background-color: rgba(127,205,255, 0.95);
+    border-top: 1px solid #FFF;
+    &__content {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    &__logo {
+        font-size: 30px;
+        font-weight: bold;
+        color: 	$main-color;
+        cursor: pointer;
+        &:hover {
+            color: $main-color;
+            text-decoration: none;
+        }
+    }
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        div {
+            font-weight: bold;
+            font-size: 15PX;
+        }
+        a {
+            display: inline-block;
+            text-decoration: none;
+            transition: 0.5s all;
+            margin-top: 5px;
+            color: #064273;
+            cursor: pointer;
+            &::after {
+                content: '';
+                display: block;
+                width: 0%;
+                height: 3px;
+                background-color:#064273;
+                transition: 0.5s all;
+            }
+            &:hover::after {
+               width: 100%;
+            }
+            i {
+                margin-right: 7px;
+            }
+        }
+    }
+    @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+        & {
+          -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+          background-color: rgba(127,205,255, 0.5);  
+        }
+      }
+    
+}
