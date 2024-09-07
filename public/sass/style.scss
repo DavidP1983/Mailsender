@@ -26,9 +26,13 @@ body {
     &__center {
         padding: 33px 0;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        &-left, &-rigth {
+        gap: 259px;
+        &-left {
+            position: absolute;
+            left: 0;
+            margin-left: 10px;
             border: 1px dotted #FFF;
             display: flex;
             flex-direction: column;
@@ -44,12 +48,6 @@ body {
                 height: 166px;
             }
         }
-      &-left {
-        margin-left: 10px;
-      }
-      &-rigth {
-        margin-right: 10px;
-      }
     }
 }
 

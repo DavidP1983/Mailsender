@@ -16,7 +16,7 @@
 
             <header class="header">
                 <div class="header__logo">
-                    <img src="img/fish.jpg" alt="Gfishdeal Logo">
+                    <img src="img/fish2.jpg" alt="Gfishdeal Logo">
                     <h1>Gfishdeal</h1>
                 </div>
             </header>
@@ -33,21 +33,52 @@
                     <div class="container">
                         <div class="contact__form">
                             <h2>Contact Us</h2>
-                            <div class="spinner-border" role="status" style="display: none; position: absolute;"
-                                id="spinner">
+                            <div class="spinner-border" role="status"
+                                style="display: none; position: absolute; z-index: 5;" id="spinner">
                                 <span class="sr-only">Loading...</span>
                             </div>
-                            <form id="form">
+                            <form action="server.php" method="POST" id="form">
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Name</label>
                                     <input type="text" class="form-control" name="name" id="exampleFormControlInput1"
                                         placeholder="name" required>
                                 </div>
+
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Company</label>
+                                    <div class="input-group flex-nowrap">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="addon-wrapping">
+                                                <i class="fa fa-suitcase"></i>
+                                        </div>
+                                        <input type="text" class="form-control" name="company"
+                                            id="exampleFormControlInput1" placeholder="company name" required>
+                                    </div>
+                                </div>
+
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Email address</label>
-                                    <input type="email" class="form-control" name="email" id="exampleFormControlInput1"
-                                        placeholder="name@example.com" required>
+                                    <div class="input-group flex-nowrap">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="addon-wrapping">@</span>
+                                        </div>
+                                        <input type="email" class="form-control" name="email"
+                                            id="exampleFormControlInput1" placeholder="email@example.com" required>
+                                    </div>
                                 </div>
+
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Phone</label>
+                                    <div class="input-group flex-nowrap">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="addon-wrapping"><i
+                                                    class="fa fa-phone"></i></span>
+                                        </div>
+                                        <input type="text" class="form-control" name="thelepone" pattern="[^A-Za-z]{12}"
+                                            id="exampleFormControlInput1" placeholder="(+995) 123 - 23630" required>
+                                    </div>
+                                </div>
+
                                 <div class="form-group">
                                     <label for="exampleFormControlTextarea1">Comments</label>
                                     <textarea class="form-control" name="message" id="exampleFormControlTextarea1"
@@ -66,19 +97,20 @@
                         </div>
                     </div>
                 </section>
-                <aside class="content__center-rigth">
+                <!-- <aside class="content__center-rigth">
                     <h3>Advertisement</h3>
                     <div>
                         <span>Your advertisement can be here</span>
                     </div>
-                </aside>
+                </aside> -->
             </div>
-
             <footer class="footer">
                 <div class="footer__content">
                     <a href="#" class="footer__logo">Gfishdeal</a>
                     <div class="footer__contacts">
                         <div>CONTACT US</div>
+                        <a href="mailto:contact@gfishdeal.com">
+                            <i class='fa fa-envelope-open'></i>info@gfishdeal.com</a>
                         <a href="mailto:contact@gfishdeal.com">
                             <i class='fa fa-envelope-open'></i>contact@gfishdeal.com</a>
                         <a href="tel:+99559951242628" class="header__contacts"><i class="fa fa-phone"></i>+995 (599)

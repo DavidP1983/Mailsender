@@ -1,4 +1,75 @@
+@media (max-width: 1200px) {
+    .header {
+        &__logo {
+            left: 41%;
+        }
+    }
+
+    .content {
+        &__center {
+            justify-content: center;
+            gap: 49px;
+            &-left {
+                h3 {
+                    font-weight: bold;
+                    color:#ffff00;
+                }
+                text-align: center;
+                color: $main-color;
+                div {
+                    height: 100px;
+                }
+            }
+        }
+    }
+    .footer {
+        padding: 9px 30px;
+        height: 139px;
+    }
+
+}
+
+
+@media (max-width: 991px) {
+    .header {
+        &__logo {
+            left: 40%;
+        }
+    }
+
+    .content {
+        &__center {
+            flex-direction: column;
+            align-items:center;
+            gap: 5px;
+            padding: 22px 0;
+            &-left {
+                position: relative;
+                text-align: center;
+                color: $main-color;
+                h3 {
+                    font-weight: bold;
+                    color:#ffff00;
+                }
+                div {
+                    height: 100px;
+                }
+            }
+        }
+    }
+    .footer {
+        padding: 9px 30px;
+        height: 139px;
+    }
+
+}
+
 @media (max-width: 767px) {
+    .header {
+        &__logo {
+            left: 39%;
+        }
+    }
     .content {
         &__center {
             flex-direction: column;
@@ -14,14 +85,20 @@
             }
         }
     }
+    .footer {
+        padding: 11px 30px;
+        height: 140px;
+    }
+
 }
 
 @media (max-width: 575px) {
     .header {
+        width: 100vw;
         &__logo {
-            left: 37%;
+            left: 30%;
             h1 {
-                font-size: 24px;
+                font-size: 36px;
             }
         }
     }
@@ -44,13 +121,19 @@
             }
             .contact {
                 &__form {
-                    width: 300px;
+                    width: 293px;
+                    margin-left: 10px;
+                }
+                form {
+                    width: 93%;
                 }
             }
         }
     }
     .footer {
-        height: 153px; 
+        width: 100vw;
+        height: 169px;
+        padding: 11px 30px; 
         &__content {
             flex-direction: column;
             align-items: center;
@@ -71,6 +154,9 @@
 }
 
 @media (max-width: 320px) {
+    .header {
+        width: 330px;
+    }
     .content {
         &__center {
             flex-direction: column;
@@ -95,8 +181,9 @@
         }
     }
     .footer {
-        padding: 8px 13px;
-        height: 136px;
+        width: 330px;
+        padding: 5px 13px;
+        height: 153px;
         &__content {
             flex-direction: column;
         }

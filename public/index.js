@@ -23,9 +23,21 @@ document.getElementById('form').addEventListener('submit', function (event) {
 
     const formData = new FormData(this);
 
+    function createPhoneNumber(numbers) {
+        const arr = numbers.split(',');
+        const [fr, th, tr, ft] = arr.join('').match(/(\d{3})|(\d+)/g);
+        return `+(${fr}) ${th}-${tr}-${ft}`
+    }
+
+
     const obj = {};
     formData.forEach((val, key) => {
-        obj[key] = val;
+        if (key === 'thelepone') {
+            obj[key] = createPhoneNumber(val);
+        } else {
+            obj[key] = val;
+        }
+
     })
 
     btn.setAttribute('disabled', '');
@@ -46,6 +58,7 @@ document.getElementById('form').addEventListener('submit', function (event) {
         .catch((error) => {
             console.log('Ошибка:', error);
             spinner.style.display = 'none';
+            btn.removeAttribute('disabled', '');
             document.querySelector('#liveToast #message').style.color = 'red';
             document.querySelector('#liveToast #message').innerHTML = 'Error please try again';
             show();
