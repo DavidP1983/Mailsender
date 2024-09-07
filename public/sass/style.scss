@@ -21,13 +21,14 @@ body {
 .content {
     width: 100%;
     height: 100vh;
-    display: grid;
-    grid-template-rows: 1fr auto;
+    // display: grid;
+    // grid-template-rows: 1fr auto;
     &__center {
         padding: 33px 0;
         display: flex;
         justify-content: space-between;
-        &-left {
+        align-items: center;
+        &-left, &-rigth {
             border: 1px dotted #FFF;
             display: flex;
             flex-direction: column;
@@ -43,17 +44,12 @@ body {
                 height: 166px;
             }
         }
-        &-rigth {
-            border: 1px dotted #FFF;
-            display: flex;
-            flex-direction: column;
-            max-width: 300px;
-            h3 {
-                font-weight: normal;
-                font-size: 15px;
-                color: white;
-            }
-        }
+      &-left {
+        margin-left: 10px;
+      }
+      &-rigth {
+        margin-right: 10px;
+      }
     }
 }
 

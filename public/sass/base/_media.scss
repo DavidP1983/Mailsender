@@ -30,6 +30,7 @@
             flex-direction: column;
             align-items:center;
             gap: 5px;
+            padding: 32px 0;
             &-left {
                 h3 {
                     font-weight: bold;
@@ -41,8 +42,32 @@
             &-rigth {
                 display: none;
             }
+            .contact {
+                &__form {
+                    width: 300px;
+                }
+            }
         }
     }
+    .footer {
+        height: 153px; 
+        &__content {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__logo {
+            font-size: 23px;
+            align-self: center;
+        }
+        &__contacts {
+            font-size: 15px;
+            & div{
+                font-size: 13px;
+            }
+
+        }
+    }
+
 }
 
 @media (max-width: 320px) {
