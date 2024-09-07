@@ -1,12 +1,43 @@
 .header {
-    background-color: rgba(255, 255, 255, 0.95);
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid rgba(37, 84, 199);
     padding: 10px 0;
-    height: 70px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 11px;
+    border-bottom-right-radius: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.95);
+    height: 85px;
     position: relative;
+    margin-bottom: 20px;
+    z-index: 3;
+    
+    &::before,
+    &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-repeat: repeat-x;
+    z-index: -1;
+    }
+
+    &::before {
+        height: 10px;
+        background-size: 20px 20px;
+        background-image: radial-gradient(circle at 10px -5px, transparent 12px, rgba(37, 84, 199) 13px);
+      }
+    
+      &::after {
+        height: 15px;
+        background-size: 40px 20px;
+        background-image: radial-gradient(circle at 10px 15px, rgba(37, 84, 199) 12px, transparent 13px);
+      }
+
+      
     &__logo {
+        top: 15px;
         left: 44%;
         transform: translateX(-50%);
         position: absolute;
