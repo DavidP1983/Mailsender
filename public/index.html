@@ -19,6 +19,16 @@
         <main class="content">
 
             <header class="header">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="full">
+                    <path fill="#0099ff" fill-opacity="0.5"
+                        d="M0,160L60,170.7C120,181,240,203,360,186.7C480,171,600,117,720,128C840,139,960,213,1080,229.3C1200,245,1320,203,1380,181.3L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z">
+                    </path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="small" display="none">
+                    <path fill="#0099ff" fill-opacity="0.5"
+                        d="M0,256L60,266.7C120,277,240,299,360,304C480,309,600,299,720,272C840,245,960,203,1080,202.7C1200,203,1320,245,1380,266.7L1440,288L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z">
+                    </path>
+                </svg>
                 <div class="header__content">
                     <div class="header__logo">
                         <img src="img/fish2.jpg" alt="Gfishdeal Logo">
@@ -28,12 +38,6 @@
             </header>
 
             <div class="content__center">
-                <aside class="content__center-left">
-                    <h3>Advertisement</h3>
-                    <div>
-                        <span>Your advertisement can be here</span>
-                    </div>
-                </aside>
 
                 <section class="contact">
                     <div class="container">
@@ -43,45 +47,45 @@
                                 style="display: none; position: absolute; z-index: 5;" id="spinner">
                                 <span class="sr-only">Loading...</span>
                             </div>
-                            <form method="POST" id="form">
+                            <form action="server.php" method="POST" id="form">
                                 <div class="form-group">
-                                    <label for="exampleFormControlInput1">Your Name, Surname</label>
+                                    <label for="exampleFormControlInput1">Name</label>
                                     <input type="text" class="form-control" name="name" id="exampleFormControlInput1"
-                                        required>
+                                        placeholder="name" required>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="exampleFormControlInput1">Your Company</label>
+                                    <label for="exampleFormControlInput1">Company</label>
                                     <div class="input-group flex-nowrap">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="addon-wrapping">
                                                 <i class="fa fa-suitcase"></i>
                                         </div>
                                         <input type="text" class="form-control" name="company"
-                                            id="exampleFormControlInput1" required>
+                                            id="exampleFormControlInput1" placeholder="company name" required>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="exampleFormControlInput1">Your Email address</label>
+                                    <label for="exampleFormControlInput1">Email address</label>
                                     <div class="input-group flex-nowrap">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="addon-wrapping">@</span>
                                         </div>
                                         <input type="email" class="form-control" name="email"
-                                            id="exampleFormControlInput1" required>
+                                            id="exampleFormControlInput1" placeholder="email@example.com" required>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="exampleFormControlInput1">Your Phone</label>
+                                    <label for="exampleFormControlInput1">Phone</label>
                                     <div class="input-group flex-nowrap">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="addon-wrapping"><i
                                                     class="fa fa-phone"></i></span>
                                         </div>
                                         <input type="text" class="form-control" name="thelepone" pattern="[^A-Za-z]{12}"
-                                            id="exampleFormControlInput1" required>
+                                            id="exampleFormControlInput1" placeholder="(+995) 123 - 23630" required>
                                     </div>
                                 </div>
 
@@ -103,12 +107,12 @@
                         </div>
                     </div>
                 </section>
-                <!-- <aside class="content__center-rigth">
+                <aside class="content__center-rigth">
                     <h3>Advertisement</h3>
                     <div>
                         <span>Your advertisement can be here</span>
                     </div>
-                </aside> -->
+                </aside>
             </div>
             <footer class="footer">
                 <div class="footer__content">

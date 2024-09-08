@@ -1,5 +1,11 @@
 @media (max-width: 1200px) {
     .header {
+        .full {
+            display: block;
+        }
+        .small {
+            display: none;
+        }
         &__logo {
             left: 41%;
         }
@@ -9,7 +15,7 @@
         &__center {
             justify-content: center;
             gap: 49px;
-            &-left {
+            &-rigth {
                 h3 {
                     font-weight: bold;
                     color:#ffff00;
@@ -32,6 +38,12 @@
 
 @media (max-width: 991px) {
     .header {
+        .full {
+            display: block;
+        }
+        .small {
+            display: none;
+        }
         &__logo {
             left: 40%;
         }
@@ -43,7 +55,8 @@
             align-items:center;
             gap: 5px;
             padding: 22px 0;
-            &-left {
+            &-rigth {
+                display: none;
                 position: relative;
                 text-align: center;
                 color: $main-color;
@@ -66,7 +79,14 @@
 
 @media (max-width: 767px) {
     .header {
+        .full {
+            display: none;
+        }
+        .small {
+            display: block;
+        }
         &__logo {
+            top: 25px;
             left: 39%;
         }
     }
@@ -75,7 +95,8 @@
             flex-direction: column;
             align-items:center;
             gap: 5px;
-            &-left {
+            &-rigth {
+                display: none;
                 h3 {
                     font-weight: bold;
                     color:#ffff00;
@@ -95,11 +116,15 @@
 @media (max-width: 575px) {
         .header {
             width: 100vw;
+            height: 80px;
             img {
                 width: 60px;
             }
             h1 {
                 font-size: 30px;
+            }
+            &__logo {
+                top: 14px;
             }
         }
     
@@ -109,21 +134,14 @@
             align-items:center;
             gap: 5px;
             padding: 32px 0;
-            &-left {
-                h3 {
-                    font-weight: bold;
-                    color:#ffff00;
-                }
-                text-align: center;
-                color: $main-color;
-            }
             &-rigth {
                 display: none;
+               
             }
             .contact {
                 &__form {
                     width: 293px;
-                    margin-left: 10px;
+                    margin-left: 0;
                 }
                 form {
                     width: 93%;
@@ -156,7 +174,14 @@
 
 @media (max-width: 320px) {
     .header {
-        width: 330px;
+        width: 323px;
+        height: 100px;
+        .full {
+            display: none;
+        }
+        .small {
+            display: block;
+        }
         img {
             width: 60px;
         }
@@ -170,7 +195,7 @@
             align-items:center;
             gap: 5px;
             padding: 9px 0;
-            &-left {
+            &-rigth {
                display: none;
             }
         }
@@ -188,7 +213,7 @@
         }
     }
     .footer {
-        width: 330px;
+        width: 323px;
         padding: 5px 13px;
         height: 153px;
         &__content {
