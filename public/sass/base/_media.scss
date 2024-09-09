@@ -7,7 +7,9 @@
             display: none;
         }
         &__logo {
-            left: 41%;
+            left: 40%;
+            width: 100px;
+            top: 14px;
         }
     }
 
@@ -45,7 +47,9 @@
             display: none;
         }
         &__logo {
-            left: 40%;
+            left: 37%;
+            width: 100px;
+            top: 11px;
         }
     }
 
@@ -87,7 +91,7 @@
         }
         &__logo {
             top: 25px;
-            left: 39%;
+            left: 37%;
         }
     }
     .content {
@@ -113,18 +117,19 @@
 
 }
 
-@media (max-width: 575px) {
+@media (max-width: 576px) {
         .header {
             width: 100vw;
             height: 80px;
             img {
-                width: 60px;
+                width: 70px;
             }
             h1 {
                 font-size: 30px;
             }
             &__logo {
                 top: 14px;
+                left: 40%;
             }
         }
     
@@ -140,16 +145,12 @@
             }
             .contact {
                 &__form {
-                    width: 335px;
+                    width: 293px;
                     margin-left: 0;
                 }
                 form {
                     width: 93%;
                 }
-                .alert {
-                    right: 31%;
-                    bottom: -13px;
-                  }
             }
         }
     }

@@ -14,124 +14,125 @@
 </head>
 
 <body>
+    <main class="content">
 
-    <div class="fish">
-        <main class="content">
-
-            <header class="header">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="full">
-                    <path fill="#0099ff" fill-opacity="0.5"
-                        d="M0,160L60,170.7C120,181,240,203,360,186.7C480,171,600,117,720,128C840,139,960,213,1080,229.3C1200,245,1320,203,1380,181.3L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z">
-                    </path>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="small" display="none">
-                    <path fill="#0099ff" fill-opacity="0.5"
-                        d="M0,256L60,266.7C120,277,240,299,360,304C480,309,600,299,720,272C840,245,960,203,1080,202.7C1200,203,1320,245,1380,266.7L1440,288L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z">
-                    </path>
-                </svg>
-                <div class="header__content">
-                    <div class="header__logo">
-                        <img src="img/fish2.jpg" alt="Gfishdeal Logo">
-                        <h1>Gfishdeal</h1>
-                    </div>
+        <header class="header">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="full">
+                <path fill="#0099ff" fill-opacity="0.5"
+                    d="M0,160L60,170.7C120,181,240,203,360,186.7C480,171,600,117,720,128C840,139,960,213,1080,229.3C1200,245,1320,203,1380,181.3L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z">
+                </path>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="small" display="none">
+                <path fill="#0099ff" fill-opacity="0.5"
+                    d="M0,256L60,266.7C120,277,240,299,360,304C480,309,600,299,720,272C840,245,960,203,1080,202.7C1200,203,1320,245,1380,266.7L1440,288L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z">
+                </path>
+            </svg>
+            <div class="header__content">
+                <div class="header__logo">
+                    <picture>
+                        <source media="(max-width: 576px)" srcset="img/fish3_small_size.jpg">
+                        <source media="(min-width: 577px)" srcset="img/fish3.webp">
+                        <img src="img/fish3.webp" alt="Gfishdeal Logo">
+                    </picture>
+                    <h1>Gfishdeal</h1>
                 </div>
-            </header>
+            </div>
+        </header>
 
-            <div class="content__center">
+        <div class="content__center">
 
-                <section class="contact">
-                    <div class="container">
-                        <div class="contact__form">
-                            <h2>Contact Us</h2>
-                            <div class="spinner-border" role="status"
-                                style="display: none; position: absolute; z-index: 5;" id="spinner">
-                                <span class="sr-only">Loading...</span>
+            <section class="contact">
+                <div class="container">
+                    <div class="contact__form">
+                        <h2>Contact Us</h2>
+                        <div class="spinner-border" role="status" style="display: none; position: absolute; z-index: 5;"
+                            id="spinner">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                        <form method="POST" id="form">
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">Your Name, Surname</label>
+                                <input type="text" class="form-control" name="name" id="exampleFormControlInput1"
+                                    required>
                             </div>
-                            <form method="POST" id="form">
-                                <div class="form-group">
-                                    <label for="exampleFormControlInput1">Your Name, Surname</label>
-                                    <input type="text" class="form-control" name="name" id="exampleFormControlInput1"
+
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">Your Company</label>
+                                <div class="input-group flex-nowrap">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="addon-wrapping">
+                                            <i class="fa fa-suitcase"></i>
+                                    </div>
+                                    <input type="text" class="form-control" name="company" id="exampleFormControlInput1"
                                         required>
                                 </div>
+                            </div>
 
-                                <div class="form-group">
-                                    <label for="exampleFormControlInput1">Your Company</label>
-                                    <div class="input-group flex-nowrap">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text" id="addon-wrapping">
-                                                <i class="fa fa-suitcase"></i>
-                                        </div>
-                                        <input type="text" class="form-control" name="company"
-                                            id="exampleFormControlInput1" required>
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">Your Email address</label>
+                                <div class="input-group flex-nowrap">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="addon-wrapping">@</span>
                                     </div>
+                                    <input type="email" class="form-control" name="email" id="exampleFormControlInput1"
+                                        required>
                                 </div>
+                            </div>
 
-                                <div class="form-group">
-                                    <label for="exampleFormControlInput1">Your Email address</label>
-                                    <div class="input-group flex-nowrap">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text" id="addon-wrapping">@</span>
-                                        </div>
-                                        <input type="email" class="form-control" name="email"
-                                            id="exampleFormControlInput1" required>
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">Your Phone</label>
+                                <div class="input-group flex-nowrap">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="addon-wrapping"><i
+                                                class="fa fa-phone"></i></span>
                                     </div>
+                                    <input type="text" class="form-control" name="thelepone" pattern="[^A-Za-z]{12}"
+                                        id="exampleFormControlInput1" required>
                                 </div>
+                            </div>
 
-                                <div class="form-group">
-                                    <label for="exampleFormControlInput1">Your Phone</label>
-                                    <div class="input-group flex-nowrap">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text" id="addon-wrapping"><i
-                                                    class="fa fa-phone"></i></span>
-                                        </div>
-                                        <input type="text" class="form-control" name="thelepone" pattern="[^A-Za-z]{12}"
-                                            id="exampleFormControlInput1" required>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="exampleFormControlTextarea1">Comments</label>
-                                    <textarea class="form-control" name="message" id="exampleFormControlTextarea1"
-                                        rows="3" required></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary" id="btn">Submit</button>
-                            </form>
-                        </div>
-                        <div class="position-absolute p-3 alert">
-                            <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true"
-                                data-delay="2000">
-                                <div class="toast-body" id="message">
-                                    Message was sent successfully.
-                                </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Comments</label>
+                                <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="3"
+                                    required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="btn">Submit</button>
+                        </form>
+                    </div>
+                    <div class="position-absolute p-3 alert">
+                        <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true"
+                            data-delay="2000">
+                            <div class="toast-body" id="message">
+                                Message was sent successfully.
                             </div>
                         </div>
                     </div>
-                </section>
-                <aside class="content__center-rigth">
-                    <h3>Advertisement</h3>
-                    <div>
-                        <span>Your advertisement can be here</span>
-                    </div>
-                </aside>
-            </div>
-            <footer class="footer">
-                <div class="footer__content">
-                    <a href="#" class="footer__logo">Gfishdeal</a>
-                    <div class="footer__contacts">
-                        <div>CONTACT US</div>
-                        <a href="mailto:contact@gfishdeal.com">
-                            <i class='fa fa-envelope-open'></i>info@gfishdeal.com</a>
-                        <a href="mailto:contact@gfishdeal.com">
-                            <i class='fa fa-envelope-open'></i>contact@gfishdeal.com</a>
-                        <a href="tel:+99559951242628" class="header__contacts"><i class="fa fa-phone"></i>+995 (551)
-                            24-26-28</a>
-                    </div>
                 </div>
-            </footer>
+            </section>
+            <aside class="content__center-rigth">
+                <h3>Advertisement</h3>
+                <div>
+                    <span>Your advertisement can be here</span>
+                </div>
+            </aside>
+        </div>
+        <footer class="footer">
+            <div class="footer__content">
+                <a href="#" class="footer__logo">Gfishdeal</a>
+                <div class="footer__contacts">
+                    <div>CONTACT US</div>
+                    <a href="mailto:contact@gfishdeal.com">
+                        <i class='fa fa-envelope-open'></i>info@gfishdeal.com</a>
+                    <a href="mailto:contact@gfishdeal.com">
+                        <i class='fa fa-envelope-open'></i>contact@gfishdeal.com</a>
+                    <a href="tel:+99559951242628" class="header__contacts"><i class="fa fa-phone"></i>+995 (551)
+                        24-26-28</a>
+                </div>
+            </div>
+        </footer>
 
-        </main>
+    </main>
 
-    </div>
     <script src="index.js"></script>
 </body>
 
